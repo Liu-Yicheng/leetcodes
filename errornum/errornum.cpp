@@ -18,8 +18,7 @@ public:
 	      }
 	      else
 	      {
-		ans.push_back(i+1);
-		break;
+		ans.push_back(t+1);
 	      }
 	   }
 	   for(int i=0; i<n; i++)
@@ -38,8 +37,15 @@ int main()
 {
    Solution s;
    int a[6] = {1,2,3,4,5,5};
-   vector<int> b(a, a+6);
-   
-   cout<<s.fined_errornum(&b)<<endl;
+   vector<int>b;
+   b.push_back(1);
+   b.push_back(3);
+   b.push_back(5);
+   b.push_back(5);
+   b.push_back(2);
+   b.push_back(4);
+   vector<int> c = s.fined_errornum(b);
+   for (int i = 0; i <c.size(); i++)
+	cout<< c[i] <<endl;
 
 }
